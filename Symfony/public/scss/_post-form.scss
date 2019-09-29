@@ -1,0 +1,13 @@
+/**/
+.post-form {
+  background-color: $post-form-bg-color;
+  color: $post-form-label-color;
+  width: 100%;
+  height: 100vh;
+  font-weight: bold;
+  &__divider {
+    background-color: $post-form-divider-bg-color;
+    height: 1.5px;
+  }
+  
+}

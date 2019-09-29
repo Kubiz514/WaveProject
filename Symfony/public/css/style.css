@@ -9662,6 +9662,7 @@ h3 {
 /* Footer Component */
 /* Button Component */
 /* Login Component */
+/* Post Form Component */
 .bg-water {
   background-color: #3454e9ff;
   border-color: #6610f2;
@@ -9767,6 +9768,19 @@ h3 {
 .login__form-label {
   color: white;
   font-weight: bold;
+}
+
+/**/
+.post-form {
+  background-color: #3F55AA;
+  color: #ffffff;
+  width: 100%;
+  height: 100vh;
+  font-weight: bold;
+}
+.post-form__divider {
+  background-color: #ffffff;
+  height: 1.5px;
 }
 
 /*# sourceMappingURL=style.css.map */

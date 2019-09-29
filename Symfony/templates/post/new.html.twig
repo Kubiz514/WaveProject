@@ -2,10 +2,23 @@
 
 {% block title %}New Post{% endblock %}
 
-{% block body %}
-    <h1>Create new Post</h1>
+{% block content %}
+<div class="page__post-form post-form">
+<div class="container ">
+<div class="row">
+  <div class="col-md-10">
+  <h1 class="">Create new Post</h1>
+  <hr class="post-form__divider">
 
     {{ include('post/_form.html.twig') }}
+  </div>
+</div>
+  </div>
+</div>
+
+
 
     <a href="{{ path('post_index') }}">back to list</a>
+{% endblock %}
+{% block footer %}
 {% endblock %}
