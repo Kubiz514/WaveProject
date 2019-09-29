@@ -1,0 +1,29 @@
+.navbar-theme-dark {
+  font-family: $navbar-font-family;
+  background-color: $navbar-bg-dark;
+  opacity: 1.2;
+  font-size: $navbar-font-size;
+  color: $navbar-text-color;
+
+  .dropdown-menu {
+    background-color: $dropdown-bg-color;
+    border-color: $dropdown-border-color;
+
+  }
+  .dropdown-item {
+    background-color: transparent;
+    color: $dropdown-text-color;
+    &:hover {
+      background-color: $dropdown-bg-hover-color;
+    }
+  }
+
+  .dropdown-divider {
+    display: none;
+  }
+}
+
+  .nav-item.active .nav-link {
+    border-bottom: 2px solid;
+    font-weight: bold;
+  }

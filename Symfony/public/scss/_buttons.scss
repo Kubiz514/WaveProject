@@ -1,0 +1,12 @@
+.sign-in__button {
+  display: flex;
+  color: $sign-in-button-text-color;
+  background-color: $sign-in-button-bg-color;
+  border-color: $dropdown-border-color;
+
+  &:hover {
+    color: $sign-in-button-text-color;
+    background-color: $sign-in-button-bg-hover-color;
+  }
+  
+}
