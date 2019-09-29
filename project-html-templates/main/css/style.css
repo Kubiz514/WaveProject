@@ -9655,6 +9655,7 @@ h3 {
     border-color: #dee2e6;
   }
 }
+/* Color variables */
 /* Body */
 /* Navbar Component */
 /* Article Component */
@@ -9672,10 +9673,9 @@ h3 {
 }
 .page__bg-img {
   background-image: url("../img/page-bg.png");
-  height: 100vh;
 }
 .page__articles {
-  height: 120%;
+  height: 100%;
   width: 100%;
 }
 .page__footer {
