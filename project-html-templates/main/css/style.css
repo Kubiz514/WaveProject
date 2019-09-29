@@ -9660,6 +9660,7 @@ h3 {
 /* Article Component */
 /* Footer Component */
 /* Button Component */
+/* Login Component */
 .bg-water {
   background-color: #3454e9ff;
   border-color: #6610f2;
@@ -9669,18 +9670,19 @@ h3 {
   margin: 0;
   padding: 0;
 }
-
 .page__bg-img {
   background-image: url("../img/page-bg.png");
   height: 100vh;
 }
-
+.page__articles {
+  height: 120%;
+  width: 100%;
+}
 .page__footer {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
-
 .navbar-theme-dark {
   font-family: "Arial";
   background-color: #3454e9ff;
@@ -9703,13 +9705,14 @@ h3 {
   display: none;
 }
 
-.active .nav-link {
+.nav-item.active .nav-link {
   border-bottom: 2px solid;
   font-weight: bold;
 }
 
 .article {
   margin-top: 2rem;
+  margin-bottom: 2rem;
   margin-left: 1rem;
   margin-right: 1rem;
   opacity: 1;
@@ -9718,29 +9721,26 @@ h3 {
   text-align: justify;
   padding: 1rem;
 }
-
 .article__header {
   color: #ffffff;
 }
-
 .article__header-divider {
   color: #ffffff;
   background-color: #ffffff;
   height: 1.5px;
 }
-
 .article__created-at {
   font-weight: bold;
 }
 
 .footer {
-  margin-top: 1rem;
   padding: 1rem;
   color: #ffffff;
   background-color: #3454e9ff;
 }
 
 .sign-in__button {
+  display: flex;
   color: #ffffff;
   background-color: #3A9CE8;
   border-color: #3387C6;
@@ -9750,13 +9750,23 @@ h3 {
   background-color: #3387C6;
 }
 
-.sign-in__button--mobile {
-  display: none;
+.login {
+  background-color: #3F55AA;
+  color: white;
+  width: 100%;
+  height: 100%;
 }
-@media (max-width: 697) {
-  .sign-in__button--mobile {
-    display: flex;
-  }
+.login__form {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.login__form-divider {
+  background-color: #ffffff;
+  height: 1.5px;
+}
+.login__form-label {
+  color: white;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=style.css.map */

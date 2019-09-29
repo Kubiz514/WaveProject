@@ -6,10 +6,16 @@
     background-image: url('../img/page-bg.png');
     height: 100vh;
   }
-  
+  &__articles {
+    height: 120%;
+    width: 100%;
+  }
+
   &__footer {
     display: flex;
     flex-direction: row;
     justify-content: center;
   }
+
+  &__login {}
 }
