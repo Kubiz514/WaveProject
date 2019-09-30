@@ -16,13 +16,15 @@
                 <p class="article__created-at">{{ post.createdAt ? post.createdAt|date('Y-m-d H:i:s') : '' }}</p>
             </article>
         {% else %}
-            No records found
+            No records found <br>
+            {% if is_granted('IS_AUTHENTICATED') %}
+              <a href="{{ path('post_new') }}" class="btn btn-success">Create new</a>
+            {% endif %}
         {% endfor %}
 
       </div>
     </div>
-  </section>
 
-    <a href="{{ path('post_new') }}">Create new</a>
+  </section>
 
 {% endblock %}
