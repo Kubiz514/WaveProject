@@ -16,7 +16,10 @@
                 <p class="article__created-at">{{ post.createdAt ? post.createdAt|date('Y-m-d H:i:s') : '' }}</p>
 
                 {% if is_granted('IS_AUTHENTICATED') %}
+                
                 {% include('post/_delete_form.html.twig') %}
+                <a href="{{ path('post_edit', {'id': post.id}) }}" class="btn btn-secondary">Edit</a>
+
                 {% endif %}
             </article>
 
