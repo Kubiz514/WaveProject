@@ -1,6 +1,7 @@
 @import "./libs/bootstrap/bootstrap";
 @import "./utilities/variables";
 @import "./utilities/background";
+@import "./utilities/mixins";
 @import "./components/page";
 @import "./components/navbar";
 @import "./components/article";
@@ -8,3 +9,4 @@
 @import "./components/buttons";
 @import "./components/login";
 @import "./components/post-form";
+@import "./components/spacers";

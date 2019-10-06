@@ -1,20 +1,18 @@
+
 .navbar-theme-dark {
   font-family: $navbar-font-family;
-  background-color: $navbar-bg-dark;
+  @include set_colors($navbar-text-color, $navbar-bg-dark);
   opacity: 1.2;
   font-size: $navbar-font-size;
-  color: $navbar-text-color;
 
   .dropdown-menu {
-    background-color: $dropdown-bg-color;
-    border-color: $dropdown-border-color;
+    @include set_colors(null, $dropdown-bg-color, $dropdown-border-color);
 
   }
   .dropdown-item {
-    background-color: transparent;
-    color: $dropdown-text-color;
+    @include set_colors($dropdown-text-color);
     &:hover {
-      background-color: $dropdown-bg-hover-color;
+      @include set_colors($dropdown-text-color, $dropdown-bg-hover-color);
     }
   }
 

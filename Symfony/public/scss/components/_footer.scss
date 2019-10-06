@@ -1,5 +1,4 @@
 .footer {
   padding: 1rem;
-  color: $footer-text-color;
-  background-color: $footer-bg-color;
+  @include set_colors($footer-text-color, $footer-bg-color);
 }

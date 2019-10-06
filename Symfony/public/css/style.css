@@ -9668,6 +9668,7 @@ h3 {
   border-color: #6610f2;
 }
 
+/* Article Component Mixins */
 .page {
   margin: 0;
   padding: 0;
@@ -9678,6 +9679,7 @@ h3 {
 .page__articles {
   height: 100%;
   width: 100%;
+  margin-bottom: 80vh;
 }
 .page__footer {
   display: flex;
@@ -9686,20 +9688,20 @@ h3 {
 }
 .navbar-theme-dark {
   font-family: "Arial";
+  color: #ffffff;
   background-color: #3454e9ff;
   opacity: 1.2;
   font-size: 1rem;
-  color: #ffffff;
 }
 .navbar-theme-dark .dropdown-menu {
   background-color: #3F55AA;
   border-color: #3387C6;
 }
 .navbar-theme-dark .dropdown-item {
-  background-color: transparent;
   color: #ffffff;
 }
 .navbar-theme-dark .dropdown-item:hover {
+  color: #ffffff;
   background-color: #707eb3;
 }
 .navbar-theme-dark .dropdown-divider {
@@ -9712,13 +9714,13 @@ h3 {
 }
 
 .article {
+  color: #ffffff;
+  background-color: #3F55AA;
   margin-top: 2rem;
   margin-bottom: 2rem;
   margin-left: 1rem;
   margin-right: 1rem;
   opacity: 1;
-  background-color: #3F55AA;
-  color: #ffffff;
   text-align: justify;
   padding: 1rem;
 }
@@ -9752,8 +9754,8 @@ h3 {
 }
 
 .login {
+  color: #ffffff;
   background-color: #3F55AA;
-  color: white;
   width: 100%;
   height: 100vh;
 }
@@ -9772,8 +9774,8 @@ h3 {
 
 /**/
 .post-form {
-  background-color: #3F55AA;
   color: #ffffff;
+  background-color: #3F55AA;
   width: 100%;
   height: 100vh;
   font-weight: bold;
@@ -9781,6 +9783,10 @@ h3 {
 .post-form__divider {
   background-color: #ffffff;
   height: 1.5px;
+}
+
+.login-spacer {
+  margin-bottom: 80vh;
 }
 
 /*# sourceMappingURL=style.css.map */
