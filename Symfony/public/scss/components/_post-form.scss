@@ -1,0 +1,12 @@
+/**/
+.post-form {
+  @include set_colors($post-form-label-color, $post-form-bg-color);
+  width: 100%;
+  height: 100vh;
+  font-weight: bold;
+  &__divider {
+    background-color: $post-form-divider-bg-color;
+    height: 1.5px;
+  }
+
+}

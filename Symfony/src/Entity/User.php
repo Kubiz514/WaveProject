@@ -23,7 +23,7 @@ class User implements UserInterface
     private $email;
 
     /**
-     * @ORM\Column(type="json")
+     * @ORM\Column(type="string")
      */
     private $roles = [];
 
@@ -67,9 +67,9 @@ class User implements UserInterface
     {
         $roles = $this->roles;
         // guarantee every user at least has ROLE_USER
-        $roles[] = 'ROLE_USER';
+        $roles = 'ROLE_USER';
 
-        return array_unique($roles);
+        return [$roles];
     }
 
     public function setRoles(array $roles): self

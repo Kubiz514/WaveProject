@@ -1,0 +1,24 @@
+.page {
+  margin: 0;
+  padding: 0;
+
+  &__bg-img {
+    background-image: url('../img/page-bg.png');
+  }
+  &__articles {
+    height: 100%;
+    width: 100%;
+    margin-bottom: 80vh;
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  &__login {
+  }
+
+  &__post-form {}
+}
