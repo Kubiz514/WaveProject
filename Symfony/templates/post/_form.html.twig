@@ -1,4 +1,12 @@
 {{ form_start(form) }}
+    <label for="">Title:</label>
+    <br>
+    {{ form_widget(form.title) }}
+    <br>
+    <label for="">Content:</label>
+    <br>
+    {{ form_widget(form.content) }}
     {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
+    <br>
+    <button class="btn btn-success">{{ button_label|default('Save') }}</button>
 {{ form_end(form) }}

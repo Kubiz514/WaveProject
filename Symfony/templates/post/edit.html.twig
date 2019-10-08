@@ -2,12 +2,25 @@
 
 {% block title %}Edit Post{% endblock %}
 
-{% block body %}
+{% block content %}
+
+<div class="page__post-form post-form">
+<div class="container ">
+  <div class="row">
+    <div class="col-md-10">
     <h1>Edit Post</h1>
+      <hr class="post-form__divider">
+      {{ include('post/_form.html.twig', {'button_label': 'Update'}) }}
+      <br>
+      <a href="{{ path('post_index')}}" class="btn btn-secondary" >back to list</a>
 
-    {{ include('post/_form.html.twig', {'button_label': 'Update'}) }}
+      {{ include('post/_delete_form.html.twig') }}
+    </div>
+  </div>
+</div>
+</div>
 
-    <a href="{{ path('post_index') }}">back to list</a>
 
-    {{ include('post/_delete_form.html.twig') }}
+
+
 {% endblock %}

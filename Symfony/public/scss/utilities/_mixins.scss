@@ -1,0 +1,14 @@
+@mixin set_colors($color: null, $bg-color: null, $border-color: null) {
+  color: $color;
+  background-color: $bg-color;
+  border-color: $border-color;
+}
+
+/* Article Component Mixins */
+@mixin article-margin {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  @content;
+}
