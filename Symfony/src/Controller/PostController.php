@@ -20,8 +20,10 @@ class PostController extends AbstractController
 
     public function index(PostRepository $postRepository): Response
     {
+      $posts = $postRepository->findPaginatedPosts();
+
         return $this->render('post/index.html.twig', [
-            'posts' => $postRepository->findAll(),
+            'posts' => $posts,
         ]);
     }
 

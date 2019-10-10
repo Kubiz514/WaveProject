@@ -19,9 +19,19 @@ class PostRepository extends ServiceEntityRepository
         parent::__construct($registry, Post::class);
     }
 
+
     // /**
     //  * @return Post[] Returns an array of Post objects
     //  */
+
+    public function findPaginatedPosts() {
+      return $this->createQueryBuilder('p')
+          ->orderBy('p.created_at', 'DESC')
+          ->setMaxResults(2)
+          ->getQuery()
+          ->getResult()
+      ;
+    }
     /*
     public function findByExampleField($value)
     {
