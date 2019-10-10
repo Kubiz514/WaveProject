@@ -31,6 +31,12 @@ class Post
      */
     private $created_at;
 
+    public function __construct()
+   {
+       $this->created_at = new \DateTime();
+   }
+
+
     public function getId(): ?int
     {
         return $this->id;
@@ -67,7 +73,7 @@ class Post
 
     public function setCreatedAt(\DateTimeInterface $created_at): self
     {
-        $this->created_at = $created_at;
+        $this->created_at = new \DateTime();
 
         return $this;
     }

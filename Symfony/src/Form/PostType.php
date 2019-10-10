@@ -21,7 +21,6 @@ class PostType extends AbstractType
                 'required' => true
               ]
             ])
-            ->add('created_at')
         ;
     }
 

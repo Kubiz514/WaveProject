@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Post index{% endblock %}
+{% block title %}Aktualności{% endblock %}
 
 {% block content %}
 
@@ -18,15 +18,18 @@
                 {% if app.user %}
                   <a href="{{ path('post_edit', {'id': post.id}) }}" class="btn btn-secondary">Edit</a>
                   <br>
-                  <br>  
+                  <br>
                   {% include('post/_delete_form.html.twig') %}
                 {% endif %}
             </article>
 
         {% else %}
-            No records found <br>
+        <br>
+            <p class="text-white font-weight-bold">
+              Brak utworzonych postów
+            </p>
             {% if app.user %}
-              <a href="{{ path('post_new') }}" class="btn btn-success">Create new</a>
+              <a href="{{ path('post_new') }}" class="btn btn-lg btn-success">Utwórz nowy</a>
             {% endif %}
 
         {% endfor %}
