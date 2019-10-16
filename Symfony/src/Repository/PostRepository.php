@@ -27,7 +27,7 @@ class PostRepository extends ServiceEntityRepository
     public function findPaginatedPosts() {
       return $this->createQueryBuilder('p')
           ->orderBy('p.created_at', 'DESC')
-          ->setMaxResults(2)
+          ->setMaxResults(3)
           ->getQuery()
           ->getResult()
       ;

@@ -3,12 +3,11 @@
   padding: 0;
 
   &__bg-img {
-    background-image: url('../img/page-bg.png');
+    background-color: $body-bg;
   }
   &__articles {
     height: 100%;
     width: 100%;
-    margin-bottom: 80vh;
   }
 
   &__footer {

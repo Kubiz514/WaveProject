@@ -2,7 +2,7 @@
 $white: #ffffff;
 
 /* Body */
-$body-bg: #0039eecd;
+$body-bg: #222f3e;
 
 /* Navbar Component */
 $navbar-bg-dark: #3454e9ff;
@@ -10,9 +10,9 @@ $navbar-font-family: 'Arial';
 $navbar-font-size: 1rem;
 $navbar-text-color: $white;
 //
-$dropdown-bg-color: #3F55AA;
-$dropdown-bg-hover-color: #707eb3;
-$dropdown-border-color: #3387C6;
+$dropdown-bg-color: lighten(mix(#3F55AA, $navbar-bg-dark), 15%);
+$dropdown-bg-hover-color:  lighten($dropdown-bg-color, 15%);
+$dropdown-border-color: lighten(#3387C6, 15%);
 $dropdown-text-color: $white;
 
 
@@ -33,7 +33,7 @@ $dropdown-border-color:  #3387C6;
 $sign-in-button-text-color: $white;
 
 /* Login Component */
-$login-bg-color: #3F55AA;
+$login-bg-color: #222f3e;
 $login-label-color: $white;
 
 $login-form-divider-bg-color: $white;
