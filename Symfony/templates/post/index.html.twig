@@ -25,11 +25,13 @@
 
         {% else %}
         <br>
-            <p class="text-white font-weight-bold">
+            <p class="text-white font-weight-bold ">
               Brak utworzonych postów
             </p>
+
             {% if app.user %}
               <a href="{{ path('post_new') }}" class="btn btn-lg btn-success">Utwórz nowy</a>
+              <p class="footer-spacer"></p>
             {% endif %}
 
         {% endfor %}

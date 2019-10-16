@@ -1,4 +1,7 @@
 .footer {
   padding: 1rem;
   @include set_colors($footer-text-color, $footer-bg-color);
+  &-spacer {
+    margin-bottom: 80vh;
+  }
 }
