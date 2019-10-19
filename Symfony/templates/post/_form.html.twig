@@ -8,5 +8,7 @@
     {{ form_widget(form.content) }}
     {{ form_widget(form) }}
     <br>
+    {{ form_widget(form.imageFilename) }}
+    <br>
     <button class="btn btn-success">{{ button_label|default('Save') }}</button>
 {{ form_end(form) }}

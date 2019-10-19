@@ -7,6 +7,8 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use FOS\CKEditorBundle\Form\Type\CKEditorType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Validator\Constraints\File;
 
 class PostType extends AbstractType
 {
@@ -20,6 +22,16 @@ class PostType extends AbstractType
                 'toolbar' => 'full',
                 'required' => true
               ]
+            ])
+			->add('imageFilename', FileType::class, [
+            'label' => 'Image',
+            'mapped' => false,
+            'required' => false,
+            'constraints' => [
+                new File([
+                    'maxSize' => '30000k',
+                ])
+            ],
             ])
         ;
     }

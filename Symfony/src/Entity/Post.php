@@ -31,11 +31,26 @@ class Post
      */
     private $created_at;
 
+    /**
+     * @ORM\Column(type="string")
+     */
+    private $imageFilename;
+
+    public function getImageFilename()
+    {
+        return $this->imageFilename;
+    }
+
+    public function setImageFilename($imageFilename)
+    {
+        $this->imageFilename = $imageFilename;
+
+        return $this;
+    }
     public function __construct()
    {
        $this->created_at = new \DateTime();
    }
-
 
     public function getId(): ?int
     {
