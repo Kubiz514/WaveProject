@@ -20,7 +20,8 @@
 					</a>
 				</div>
 			</div>
-			{% endif %}			
+      <a>{{post.imagePosition}}</a>
+			{% endif %}
                 <div class="article__text ">{{ post.content | raw }}</div>
                 <p class="article__created-at">{{ post.createdAt ? post.createdAt|date('Y-m-d H:i:s') : '' }}</p>
 

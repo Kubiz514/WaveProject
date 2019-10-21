@@ -9,6 +9,7 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use FOS\CKEditorBundle\Form\Type\CKEditorType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Validator\Constraints\File;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 
 class PostType extends AbstractType
 {
@@ -33,6 +34,13 @@ class PostType extends AbstractType
                 ])
             ],
             ])
+      ->add('imagePosition', ChoiceType::class, [
+          'choices'  => [
+            'Lewo' => 'left',
+            'Środek' => 'centre',
+            'Prawo' => 'right',
+    ],
+      ])
         ;
     }
 
