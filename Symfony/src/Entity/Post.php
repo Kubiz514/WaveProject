@@ -36,6 +36,23 @@ class Post
      */
     private $imageFilename;
 
+    /**
+     * @ORM\Column(type="string")
+     */
+    private $imagePosition;
+
+    public function getimagePosition()
+    {
+        return $this->imagePosition;
+    }
+
+    public function setimagePosition($imagePosition)
+    {
+        $this->imagePosition = $imagePosition;
+
+        return $this;
+    }
+
     public function getImageFilename()
     {
         return $this->imageFilename;
