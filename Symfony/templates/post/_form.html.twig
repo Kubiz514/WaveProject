@@ -1,16 +1,20 @@
 {{ form_start(form) }}
-    <label for="">Title:</label>
+    <label for="">Tytuł:</label>
     <br>
     {{ form_widget(form.title) }}
     <br>
-    <label for="">Content:</label>
+    <label for="">Zawartość:</label>
     <br>
     {{ form_widget(form.content) }}
-    {{ form_widget(form) }}
+    <br>
+    <label for="">Wybór obrazu:</label>
     <br>
     {{ form_widget(form.imageFilename) }}
     <br>
-    {{ form_widget(form.imagePosition) }}
+    <label for="">Pozycja zdjęcia:</label>
     <br>
-    <button class="btn btn-success">{{ button_label|default('Save') }}</button>
+    {{ form_widget(form.imagePosition) }}
+    {{ form_widget(form) }}
+    <br>
+    <button class="btn btn-success">{{ button_label|default('Zapisz') }}</button>
 {{ form_end(form) }}
