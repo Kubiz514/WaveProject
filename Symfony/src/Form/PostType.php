@@ -36,9 +36,9 @@ class PostType extends AbstractType
             ])
       ->add('imagePosition', ChoiceType::class, [
           'choices'  => [
-            'Lewo' => 'left',
-            'Środek' => 'centre',
-            'Prawo' => 'right',
+            'Lewo' => 'float-left',
+            'Środek' => 'mx-auto d-block',
+            'Prawo' => 'float-right',
     ],
       ])
         ;

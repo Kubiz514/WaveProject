@@ -13,14 +13,17 @@
             <h1 class="article__header">{{ post.title }}</h1>
             <hr class="article__header-divider">
 			{% if post.imageFilename %}
-			<div class="row">
-				<div class="col-md-12">
-					<a href="/uploads/{{ post.imageFilename }}" download>
-						<img src="/uploads/{{ post.imageFilename }}" class="img-fluid" alt="Pobierz" onerror="this.style.display='text-decoration:none;'"/>
-					</a>
-				</div>
-			</div>
-      <a>{{post.imagePosition}}</a>
+        			<div class="row">
+        				<div class="col-md-12">
+
+        					<a href="/uploads/{{ post.imageFilename }}" download>
+        						<img src="/uploads/{{ post.imageFilename }}" class="
+                    img-fluid {{ post.imagePosition }} " alt="Pobierz" onerror="this.style.display='text-decoration:none;'"/>
+        					</a>
+
+        				</div>
+        			</div>
+
 			{% endif %}
                 <div class="article__text ">{{ post.content | raw }}</div>
                 <p class="article__created-at">{{ post.createdAt ? post.createdAt|date('Y-m-d H:i:s') : '' }}</p>
