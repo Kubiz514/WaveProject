@@ -10,35 +10,66 @@
 <body >
   <div class="container">
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <a class="navbar-brand" href="#">Navbar</a>
+  <a class="navbar-brand" href="#">Fala</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+      <li class="nav-item {{ app.request.get('_route') == 'index' ? 'active' }}">
+        <a class="nav-link" href="{{ url('index') }}">Aktualności <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
+          O klubie
         </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
+        <div class="dropdown-menu" aria-labelledby="navbarSecondDropdown">
+          <a class="dropdown-item" href="http://www.fala.ropczyce.info/Oklubie.php">O klubie</a>
+          <a class="dropdown-item" href="http://www.fala.ropczyce.info/Osiagniecia.php">Osiągnięcia</a>
+          <a class="dropdown-item" href="http://www.fala.ropczyce.info/rekordy.php">Rekordy klubu</a>
+          <a class="dropdown-item" href="http://www.fala.ropczyce.info/Nauka.php">Nauka pływania</a>
+          <a class="dropdown-item" href="http://www.fala.ropczyce.info/Rozklad.php">Rozkład zajęć</a>
+          <a class="dropdown-item" href="http://www.fala.ropczyce.info/Pliki_do_pobrania.php">Pliki do pobrania</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Zawody
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarSecondDropdown">
+          <a class="dropdown-item" href="http://www.fala.ropczyce.info/Komunikaty.php">Zawody-komunikaty</a>
+          <a class="dropdown-item" href="http://www.fala.ropczyce.info/Zawody.php">Zawody jubileuszowe</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Kontakt
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarSecondDropdown">
+          <a class="dropdown-item" href="http://www.fala.ropczyce.info/Kontakt.php">Kontakt</a>
+          <a class="dropdown-item" href="http://www.fala.ropczyce.info/Formularz.php">Formularz kontaktowy</a>
+          <a class="dropdown-item" href="http://www.fala.ropczyce.info/Linki.php">Linki</a>
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        <a class="nav-link " href="http://www.fala.ropczyce.info/galeria.php" tabindex="-1" aria-disabled="true">Galeria</a>
       </li>
+
     </ul>
-    <button class="btn btn-info">Log in</button>
+    <div class="nav-item dropdown">
+      <div class="btn-group">
+      <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Zarządzaj stroną
+      </button>
+      <div class="dropdown-menu" aria-labelledby="navbarSecondDropdown">
+            <a class="dropdown-item" href="{{ path('post_new') }}">Utwórz nowy post</a>
+            <a class="dropdown-item" href="{{ path('post_index') }}">Lista postów</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="{{ path('app_logout') }}">Wyloguj się</a>
+      </div>
+      </div>
+    </div>
   </div>
 </nav>
 
