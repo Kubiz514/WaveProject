@@ -8,9 +8,7 @@
         <div class="col-md-2"></div>
         <div class="col-md-8">
         <form method="post">
-            {% if error %}
-                <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-            {% endif %}
+
 
             {% if app.user %}
               You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
@@ -32,6 +30,9 @@
                 Zaloguj
             </button>
             <br><br>
+            {% if error %}
+                <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+            {% endif %}
             <br>
             <br>
             <br>
