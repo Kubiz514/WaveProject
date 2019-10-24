@@ -11,7 +11,7 @@ post_new:
   controller: App\Controller\PostController:new
   methods: GET|POST
 post_show:
-  path: /admin/post/{id}
+  path: /post/{id}
   controller: App\Controller\PostController:show
   methods: GET
 post_edit:
