@@ -3,12 +3,10 @@
 {% block title %}Zaloguj się{% endblock %}
 
 {% block content %}
-
-<div class="page__login login">
-    <div class="container login__form">
-      <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-6">
+    <div class="container text-white">
+      <div class="row ">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
         <form method="post">
             {% if error %}
                 <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
@@ -18,8 +16,9 @@
               You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
 
             {% else %}
+            <br>
             <h1>Zaloguj się</h1>
-            <hr class="login__form-divider">
+            <hr class="bg-white">
             <label for="inputEmail" class="sr-only">Email</label>
             <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
             <br>
@@ -29,11 +28,43 @@
             <input type="hidden" name="_csrf_token"
                    value="{{ csrf_token('authenticate') }}">
 
-            <button class="btn sign-in__button" type="submit">
+            <button class="btn btn-info" type="submit">
                 Zaloguj
             </button>
+            <br><br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
         </form>
         </div>
+        <div class="col-md-2"></div>
       </div>
       </div>
 
@@ -42,6 +73,4 @@
 {% endif %}
 </div>
 </div>
-</div>
 {% endblock %}
-{% block footer %}{% endblock %}
