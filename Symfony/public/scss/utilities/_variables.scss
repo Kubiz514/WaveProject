@@ -1,7 +1,12 @@
 $imperial-primer: #222f3e;
-
+/* Colors */
 $fuel-town: #34495e;
 $joust-blue: #54a0ff;
 $wild-green: #1dd1a1;
 
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap&subset=latin-ext');
+$montserrat-font: 'Montserrat';
+
+$body-font: $montserrat-font;
 $body-bg: $imperial-primer;

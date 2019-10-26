@@ -3,7 +3,7 @@
 {% block title %}Zaloguj się{% endblock %}
 
 {% block content %}
-    <div class="container text-white">
+    <div class="page-full container text-white">
       <div class="row ">
         <div class="col-md-2"></div>
         <div class="col-md-8">
@@ -33,36 +33,7 @@
             {% if error %}
                 <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
             {% endif %}
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
+
         </form>
         </div>
         <div class="col-md-2"></div>
@@ -70,7 +41,7 @@
       </div>
 
     </div>
-
+  <div class="no-content-spacer"></div>
 {% endif %}
 </div>
 </div>

@@ -1,0 +1,11 @@
+.admin-menu  {
+  background-color: $wild-green !important;
+  .dropdown-item {
+    background-color: $wild-green;
+      color: white !important;
+      &:hover {
+        background-color: darken($wild-green, 15%);
+
+      }
+  }
+}
