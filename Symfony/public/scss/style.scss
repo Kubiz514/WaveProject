@@ -1,3 +1,11 @@
+/*Utilities*/
 @import "./utilities/variables";
 @import "./utilities/colors";
+@import "./utilities/fonts";
+
+/* Components */
+@import "./components/page";
+@import "./components/dropdown-menu";
+
+/* Bootstrap import */
 @import "./libs/bootstrap/bootstrap";
