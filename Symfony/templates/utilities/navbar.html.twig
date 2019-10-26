@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-joust_blue">
+<nav class="navbar navbar-expand-lg navbar-dark bg-joust_blue montserrat-font">
 <a class="navbar-brand" href="#">Fala</a>
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 <span class="navbar-toggler-icon"></span>
@@ -49,19 +49,19 @@
 {% if app.user %}
 <div class="nav-item dropdown">
   <div class="btn-group">
-  <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button type="button" class="btn btn-wild_green dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Zarządzaj stroną
   </button>
-  <div class="dropdown-menu" aria-labelledby="navbarSecondDropdown">
-        <a class="dropdown-item" href="{{ path('post_new') }}">Utwórz nowy post</a>
-        <a class="dropdown-item" href="{{ path('post_index') }}">Lista postów</a>
+  <div class="dropdown-menu admin-menu" aria-labelledby="navbarSecondDropdown">
+        <a class="dropdown-item " href="{{ path('post_new') }}">Utwórz nowy post</a>
+        <a class="dropdown-item " href="{{ path('post_index') }}">Lista postów</a>
         <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="{{ path('app_logout') }}">Wyloguj się</a>
+        <a class="dropdown-item " href="{{ path('app_logout') }}">Wyloguj się</a>
   </div>
   </div>
   {% else %}
   <div class="btn-group">
-  <a type="button" href="{{ url('app_login') }}" class="btn btn-info">
+  <a type="button" href="{{ url('app_login') }}" class="btn btn-fuel">
     Zaloguj się
   </a>
   </div>
