@@ -3,8 +3,7 @@
 {% block title %}Aktualności{% endblock %}
 
 {% block content %}
-<div class=" bg-secondary text-white">
-
+<div class="text-white">
 
   <section class="main-articles container">
     <br>
@@ -15,18 +14,15 @@
 
     <div class="col-md-4">
       <br>
-      <div class="card bg-dark">
+      <div class="card bg-dark border-secondary">
 
         <div class="card-body">
           <h5 class="card-title text-center">{{ post.title | upper }}</h5>
 
           <img src="/uploads/{{ post.imageFilename }}" class="card-img-top" width="300px" height="300px">
           <br><br>
-          <a href=" {{ url('post_show', {'id': post.id })}} " class="btn btn-primary">Szczegóły</a>
-          <br><br>
-          <p class="font-weight-bold">
-            {{ post.createdat |date("d/m/Y") }}
-          </p>
+          <a href=" {{ url('post_show', {'id': post.id })}} " class="btn btn-block btn-outline-light font-weight-light">Szczegóły</a>
+
 
         </div>
       </div>

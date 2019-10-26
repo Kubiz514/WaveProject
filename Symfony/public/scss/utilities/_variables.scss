@@ -1,44 +1,7 @@
-/* Color variables */
-$white: #ffffff;
+$imperial-primer: #222f3e;
 
-/* Body */
-$body-bg: #222f3e;
+$fuel-town: #34495e;
+$joust-blue: #54a0ff;
+$wild-green: #1dd1a1;
 
-/* Navbar Component */
-$navbar-bg-dark: #3454e9ff;
-$navbar-font-family: 'Arial';
-$navbar-font-size: 1rem;
-$navbar-text-color: $white;
-//
-$dropdown-bg-color: lighten(mix(#3F55AA, $navbar-bg-dark), 15%);
-$dropdown-bg-hover-color:  lighten($dropdown-bg-color, 15%);
-$dropdown-border-color: lighten(#3387C6, 15%);
-$dropdown-text-color: $white;
-
-
-/* Article Component */
-$article-header-color: $white;
-$article-text-color: $white;
-$article-header-divider-bg-color: $white;
-$article-bg-color: #3F55AA;
-
-/* Footer Component */
-$footer-text-color: $white;
-$footer-bg-color: #3454e9ff;
-
-/* Button Component */
-$sign-in-button-bg-color: #3A9CE8;
-$sign-in-button-bg-hover-color: #3387C6;
-$dropdown-border-color:  #3387C6;
-$sign-in-button-text-color: $white;
-
-/* Login Component */
-$login-bg-color: #222f3e;
-$login-label-color: $white;
-
-$login-form-divider-bg-color: $white;
-
-/* Post Form Component */
-$post-form-bg-color: $body-bg;
-$post-form-label-color: $white;
-$post-form-divider-bg-color: $white;
+$body-bg: $imperial-primer;

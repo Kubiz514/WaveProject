@@ -3,21 +3,19 @@
 {% block title %}Kreator postów{% endblock %}
 
 {% block content %}
-<div class="page__post-form post-form">
+
 <div class="container text-white">
 <div class="row">
   <div class="col-md-10">
   <br>
   <h1 class="">Utwórz nowy post</h1>
   <hr class="bg-white">
-
     {{ include('post/_form.html.twig') }}
     <br>
     <a href="{{ path('post_index') }}" class="btn btn-secondary">powrót do listy</a>
   </div>
 </div>
   </div>
-</div>
 <br>
 <br>
 <br>

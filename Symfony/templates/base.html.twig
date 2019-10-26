@@ -4,20 +4,22 @@
         <meta charset="UTF-8">
       <title>{% block title %}Witamy!{% endblock %}</title>
         {% block stylesheets %}
-          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+          <link rel="stylesheet" href="/css/style.css">
         {% endblock %}
     </head>
-    <body class="bg-dark container" >
-      <div class=" bg-secondary text-white">
+    <body class=" container" >
+
         {% block navbar %}
         {% include('./utilities/navbar.html.twig') %}
         {% endblock %}
-        {% block content %}
-        {% endblock %}
+        <div class="bg-fuel text-white">
+          {% block content %}
+          {% endblock %}
+        </div>
         {% block footer %}
           {% include('./utilities/footer.html.twig') %}
         {% endblock %}
-      </div>
+
         {% block javascripts %}
         <script src="/js/jquery.min.js"></script>
         <script src="/js/popper.min.js"></script>
