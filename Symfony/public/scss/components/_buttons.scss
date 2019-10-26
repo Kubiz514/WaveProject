@@ -1,9 +1,0 @@
-
-.sign-in__button {
-  display: flex;
-  @include set_colors($sign-in-button-text-color, $sign-in-button-bg-color, $dropdown-border-color);
-  &:hover {
-    @include set_colors($sign-in-button-text-color, $sign-in-button-bg-hover-color);
-  }
-
-}
