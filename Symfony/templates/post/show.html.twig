@@ -4,27 +4,60 @@
 
 {% block content %}
 <div class="page-full container text-white">
+  <br>
   <div class="row">
     <div class="col-md-1"></div>
-    <div class="col-md-10">
-    <br>
-      <h1>{{ post.title }}</h1>
-      <hr class="bg-white">
-        <img src="/uploads/{{ post.imageFilename }}" class="img-fluid {{ post.imagePosition }}">
-      <p class="text-center">
-          {{ post.content | raw }}
-      </p>
-  <a href="{{ path('post_index') }}" class="btn btn-light">Powrót do listy</a>
-  {% if app.user %}
-  <a href="{{ path('post_edit', {'id': post.id}) }}" class="btn btn-info">Edytuj</a>
+    <div class="col-md-10 ">
+      <h1 class="text-white ">{{ post.title }}</h1>
+      <hr class="bg-light">
 
-  {{ include('post/_delete_form.html.twig') }}
-  {% endif %}
+      <!-- Image postition center !-->
+      {% if post.imagePosition == "center" %}
+
+      <div class="text-center ">
+        <br><br>
+        <img src="/uploads/{{ post.imageFilename }}" class="img-fluid img-thumbnail border-secondary">
+      </div>
+      <br>
+      <div>
+        {{ post.content | raw }}
+      </div>
+      {% endif %}
+
+      <!-- Image postition left !-->
+      {% if post.imagePosition == "left" %}
+      <article>
+        <img src="/uploads/{{ post.imageFilename }}" class="img-fluid img-thumbnail float-left border-secondary " style="margin: 0 0.5rem;">
+        <div>
+          {{ post.content | raw }}
+        </div>
+      </article>
+
+
+      {% endif %}
+
+      <!-- Image postition right !-->
+      {% if post.imagePosition == "right" %}
+      <article>
+        <img src="/uploads/{{ post.imageFilename }}" class="img-fluid img-thumbnail float-right border-secondary " style="margin: 0 0.02rem;">
+        <div>
+          {{ post.content | raw }}
+        </div>
+      </article>
+      {% endif %}
+
+      <!-- Edit button !-->
+      {% if app.user %}
+      <br><br>
+        <a href=" {{ url('post_edit', {'id': post.id })}} " class="btn btn-block btn-secondary font-weight-light">Edytuj</a>
+      {% endif %}
+
+    </div>
+    <div class="col-md-1"></div>
   </div>
-  <div class="col-md-1"></div>
-  </div>
-  <br><br>
 
 </div>
+
+
 
 {% endblock %}
