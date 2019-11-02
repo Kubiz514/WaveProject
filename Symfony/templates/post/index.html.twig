@@ -10,26 +10,45 @@
     <h1 class="text-center text-white font-weight-bold">Aktualności</h1>
     <hr class="bg-white">
     <div class="row ">
-    {% for post in posts %}
+    {% if posts %}
+        {% for post in posts %}
 
-    <div class="col-md-4">
-      <br>
-      <div class="card bg-dark border-secondary">
+        <div class="col-md-4">
+          <br>
+          <div class="card bg-dark border-secondary">
 
-        <div class="card-body">
-          <h5 class="card-title text-center">{{ post.title | upper }}</h5>
+            <div class="card-body">
+              <h5 class="card-title text-center">{{ post.title | upper }}</h5>
 
-          <img src="/uploads/{{ post.imageFilename }}" class="card-img-top" width="300px" height="300px">
-          <br><br>
-          <a href=" {{ url('post_show', {'id': post.id })}} " class="btn btn-block btn-outline-light font-weight-light">Szczegóły</a>
+              <img src="/uploads/{{ post.imageFilename }}" class="card-img-top" width="300px" height="300px">
+              <br><br>
+              <a href=" {{ url('post_show', {'id': post.id })}} " class="btn btn-block btn-outline-light font-weight-light">Szczegóły</a>
+              {% if app.user %}
+              <a href=" {{ url('post_edit', {'id': post.id })}} " class="btn btn-block btn-secondary font-weight-light">Edytuj</a>
 
+              {% endif %}
 
-        </div>
+            </div>
+          </div>
+          </div>
+
+            {% endfor %}
+      {% else %}
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+        <p class="text-white text-center">
+        Brak postów do wyświetlenia.
+        <br>
+        <br>
+        {% if app.user %}
+          <a href="{{ path('post_new') }}" class="btn btn-success">
+            Utwórz jeden
+          </a>
+        {% endif %}
+        </p>
       </div>
-      </div>
-
-        {% endfor %}
-
+      <div class="col-md-4"></div>
+    {% endif %}
   </section>
   <br>
 
