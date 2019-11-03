@@ -19,8 +19,13 @@
 
             <div class="card-body">
               <h5 class="card-title text-center">{{ post.title | upper }}</h5>
-
-              <img src="/uploads/{{ post.imageFilename }}" class="card-img-top" width="300px" height="300px">
+              {% if post.imageFilename %}
+                <img src="/uploads/{{ post.imageFilename }}" class="card-img-top" width="300px" height="300px">
+              {% else %}
+                <p width="300px" height="300px">
+                  {{ post.content|truncate(50)|raw }}
+                </p>
+              {% endif %}
               <br><br>
               <a href=" {{ url('post_show', {'id': post.id })}} " class="btn btn-block btn-outline-light font-weight-light">Szczegóły</a>
               {% if app.user %}

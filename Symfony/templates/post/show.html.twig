@@ -14,10 +14,12 @@
         <!-- Image postition center !-->
         {% if post.imagePosition == "center" %}
 
-          <div class="text-center ">
+          <article class="text-center ">
             <br><br>
-            <img src="/uploads/{{ post.imageFilename }}" class="img-fluid img-thumbnail border-secondary">
-          </div>
+            {% if post.imageFilename %}
+              <img src="/uploads/{{ post.imageFilename }}" class="img-fluid img-thumbnail border-secondary">
+            {% endif %}
+          </article>
           <br>
           <div>
             {{ post.content | raw }}
@@ -27,7 +29,9 @@
         <!-- Image postition left !-->
         {% if post.imagePosition == "left" %}
           <article>
-            <img src="/uploads/{{ post.imageFilename }}" class="img-fluid img-thumbnail float-left border-secondary " style="margin: 0 0.5rem;">
+            {% if post.imageFilename %}
+              <img src="/uploads/{{ post.imageFilename }}" class="img-fluid img-thumbnail float-left border-secondary " style="margin: 0 0.5rem;">
+            {% endif %}
             <div>
               {{ post.content | raw }}
             </div>
@@ -38,7 +42,9 @@
         <!-- Image postition right !-->
         {% if post.imagePosition == "right" %}
           <article>
-            <img src="/uploads/{{ post.imageFilename }}" class="img-fluid img-thumbnail float-right border-secondary " style="margin: 0 0.02rem;">
+            {% if post.imageFilename %}
+              <img src="/uploads/{{ post.imageFilename }}" class="img-fluid img-thumbnail float-right border-secondary " style="margin: 0 0.02rem;">
+            {% endif %}
             <div>
               {{ post.content | raw }}
             </div>
