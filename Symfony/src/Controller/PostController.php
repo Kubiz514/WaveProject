@@ -35,27 +35,10 @@ class PostController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $imageFile = $form['imageFilename']->getData();
 
-            if ($imageFile) {
-                $originalFilename = pathinfo($imageFile->getClientOriginalName(), PATHINFO_FILENAME);
-                $newFilename = $originalFilename.'-'.uniqid().'.'.$imageFile->guessExtension();
-
-                try {
-                    $imageFile->move(
-                        $this->getParameter('uploads_directory'),
-                        $newFilename
-                    );
-                } catch (FileException $e) {
-                    // ... handle exception if something happens during file upload
-                }
-
-                $post->setImageFilename($newFilename);
-            }
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($post);
             $entityManager->flush();
-
             return $this->redirectToRoute('post_index');
         }
 
@@ -78,26 +61,8 @@ class PostController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-          $imageFile = $form['imageFilename']->getData();
 
-          if ($imageFile) {
-              $originalFilename = pathinfo($imageFile->getClientOriginalName(), PATHINFO_FILENAME);
-              $newFilename = $originalFilename.'-'.uniqid().'.'.$imageFile->guessExtension();
-
-              try {
-                  $imageFile->move(
-                      $this->getParameter('uploads_directory'),
-                      $newFilename
-                  );
-              } catch (FileException $e) {
-                  // ... handle exception if something happens during file upload
-              }
-
-              $post->setImageFilename($newFilename);
-          }
-          
             $this->getDoctrine()->getManager()->flush();
-
             return $this->redirectToRoute('post_index');
         }
 

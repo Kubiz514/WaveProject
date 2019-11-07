@@ -21,27 +21,16 @@ class PostType extends AbstractType
               'config' => [
                 'uiColor' => '#e2e2e2',
                 'toolbar' => 'full',
-                'required' => true
-              ]
-            ])
-			->add('imageFilename', FileType::class, [
-            'label' => 'Image',
-            'mapped' => false,
-            'required' => false,
-            'constraints' => [
-                new File([
-                    'maxSize' => '30000k',
-                ])
-            ],
-            ])
-      ->add('imagePosition', ChoiceType::class, [
-          'choices'  => [
-            'Lewo' => 'left',
-            'Środek' => 'center',
-            'Prawo' => 'right',
-    ],
-      ])
-        ;
+                'required' => true,
+                'language' => 'pl',
+                'filebrowserBrowseRoute' => 'elfinder',
+                'filebrowserBrowseRouteParameters' => array(
+                   'instance' => 'default',
+                   'homeFolder' => ''
+               )
+              ],
+
+            ]);
     }
 
     public function configureOptions(OptionsResolver $resolver)

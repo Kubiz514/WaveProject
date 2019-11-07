@@ -31,39 +31,6 @@ class Post
      */
     private $created_at;
 
-    /**
-     * @ORM\Column(type="string", nullable=true)
-     */
-    private $imageFilename;
-
-    /**
-     * @ORM\Column(type="string")
-     */
-    private $imagePosition;
-
-    public function getimagePosition()
-    {
-        return $this->imagePosition;
-    }
-
-    public function setimagePosition($imagePosition)
-    {
-        $this->imagePosition = $imagePosition;
-
-        return $this;
-    }
-
-    public function getImageFilename()
-    {
-        return $this->imageFilename;
-    }
-
-    public function setImageFilename($imageFilename)
-    {
-        $this->imageFilename = $imageFilename;
-
-        return $this;
-    }
     public function __construct()
    {
        $this->created_at = new \DateTime();

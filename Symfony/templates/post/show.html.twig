@@ -6,53 +6,14 @@
   <div class="page-full container text-white">
     <br>
     <div class="row">
-      <div class="col-md-1"></div>
-      <div class="col-md-10 ">
+
+      <div class="col-md-12 ">
         <h1 class="text-white ">{{ post.title }}</h1>
         <hr class="bg-light">
 
-        <!-- Image postition center !-->
-        {% if post.imagePosition == "center" %}
-
-          <article class="text-center ">
-            <br><br>
-            {% if post.imageFilename %}
-              <img src="/uploads/{{ post.imageFilename }}" class="img-fluid img-thumbnail border-secondary">
-            {% endif %}
-          </article>
-          <br>
-          <div>
-            {{ post.content | raw }}
-          </div>
-        {% endif %}
-
-        <!-- Image postition left !-->
-        {% if post.imagePosition == "left" %}
-          <article>
-            {% if post.imageFilename %}
-              <img src="/uploads/{{ post.imageFilename }}" class="img-fluid img-thumbnail float-left border-secondary " style="margin: 0 0.5rem;">
-            {% endif %}
-            <div>
-              {{ post.content | raw }}
-            </div>
-          </article>
-
-        {% endif %}
-
-        <!-- Image postition right !-->
-        {% if post.imagePosition == "right" %}
-          <article>
-            {% if post.imageFilename %}
-              <img src="/uploads/{{ post.imageFilename }}" class="img-fluid img-thumbnail float-right border-secondary " style="margin: 0 0.02rem;">
-            {% endif %}
-            <div>
-              {{ post.content | raw }}
-            </div>
-          </article>
-        {% endif %}
+          {{ post.content | raw }}
 
       </div>
-      <div class="col-md-1"></div>
     </div>
 
   </div>
